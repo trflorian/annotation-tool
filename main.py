@@ -49,9 +49,11 @@ def annotate_images(
 
             if key in labels_key_dict:
                 label = labels_key_dict[key]
+                print(f"Classified as {label}")
+
                 output_img_path = output_path / label / img_path.name
-                # move image to label folder
                 img_path.rename(output_img_path)
+
                 break
 
     cv2.destroyAllWindows()
